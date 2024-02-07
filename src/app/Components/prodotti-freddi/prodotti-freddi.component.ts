@@ -28,7 +28,9 @@ export class ProdottiFreddiComponent {
       this.value = this.value.slice(0, -1);
 
     else if (n == "INVIO"){
-      this.statusProdottoErogato = this.prod.erogaProdotto(this.value);
+      this.statusProdottoErogato = this.prod.erogaProdottoFreddo(this.value);
+       
+      //il prezzo deve essere aggiornato nel header
       console.log(this.statusProdottoErogato);
 
     }else if (this.value.length < 3)

@@ -17,5 +17,18 @@ export class SystemService {
   {
     return this.sistema.credito;
   }
+
+  scalaCredito(spesa:number) : number
+  {
+    if(this.sistema.credito >= spesa){
+      this.sistema.credito -= spesa;
+      console.log(this.getCredito());
+      return 0;
+    }else{
+      return 2; //credito insuficiente
+    }
+
+    return 1; //errore imprevisto
+  }
   
 }

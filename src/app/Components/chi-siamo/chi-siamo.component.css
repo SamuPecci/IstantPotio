@@ -1,0 +1,43 @@
+.chiSiamo {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+}
+
+header {
+      text-align: center;
+      margin-bottom: 30px;
+}
+
+h1 {
+      color: #333;
+      font-size: 30px;
+      margin: 10px 0;
+}
+
+.team-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+}
+
+.team-member {
+      width: 300px;
+      background-color: #f3f5f5;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 1px 10px 10px 1px gray;
+}
+
+.team-member h2 {
+      color: #333;
+      font-size: 24px;
+      margin: 5px 0;
+}
+
+.team-member p {
+      color: #666;
+      font-size: 16px;
+      margin: 0;
+}

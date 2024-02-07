@@ -1,0 +1,21 @@
+<app-title-bar></app-title-bar>
+
+<div class="tastierino">
+      <input type="text" name="codice" id="codice" maxlength="3" minlength="3" [value]="value">
+      <div *ngFor="let n of numeri" (click)="scrivi(n)">{{n}}</div>
+</div>
+
+<div class="flex-box">
+      <div *ngFor="let p of prodotti" class="card text-bg-dark">
+            <a href="">
+                  <img [src]="p.img" class="card-img" alt="immagine prodotto">
+                  <div class="card-img-overlay">
+                        <div class="esolamenteuntest"><span class="card-title">
+                              {{p.nome}}<br>
+                              {{p.prezzo}}€<br>
+                              {{p.id}}
+                        </span></div>
+                  </div>
+            </a>
+      </div>
+</div>

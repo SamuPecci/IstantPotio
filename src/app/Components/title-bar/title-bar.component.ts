@@ -1,18 +1,23 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { SystemService } from '../../Service/system.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-title-bar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './title-bar.component.html',
   styleUrl: './title-bar.component.css'
 })
 export class TitleBarComponent {
   titolo : string;
+  credito : number;
 
-  constructor(private route : ActivatedRoute)
+  constructor(private route : ActivatedRoute, private sys : SystemService)
   {
+    this.credito = sys.getCredito();
+
     let r = this.route.snapshot.url[0].path;
     console.log(r);
 

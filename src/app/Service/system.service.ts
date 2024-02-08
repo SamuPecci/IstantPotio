@@ -22,6 +22,8 @@ export class SystemService {
   {
     if(this.sistema.credito >= spesa){
       this.sistema.credito -= spesa;
+      this.sistema.incasso += spesa;
+
       console.log(this.getCredito());
       return 0;
     }else{
@@ -30,5 +32,4 @@ export class SystemService {
 
     return 1; //errore imprevisto
   }
-  
 }

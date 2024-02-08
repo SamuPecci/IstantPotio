@@ -25,12 +25,6 @@ header{
       padding-left: 1%;
 }
 
-.credito{
-      float: right;
-      padding-right: 2%;
-      font-weight: normal;
-}
-
 footer{
       font-size: 25px;
       line-height: 1.5em;
@@ -125,9 +119,10 @@ footer .btn:hover{
 
 .titleBar{
       display: flex;
+      justify-content: center;
       height: 50px;
       line-height: 50px;
-      flex-direction: column;
+      flex-direction: row;
       flex-wrap: wrap;
       border: 1px solid black;
       border-top: 0;
@@ -135,10 +130,9 @@ footer .btn:hover{
 }
 
 .titleBar a{
-      width: 35px;
-      height: 35px;
       position: absolute;
-      padding-left: 1%;
+      height: 35px;
+      padding-right: 95%;
 }
 .titleBar img{
       margin-top: -10px;
@@ -148,5 +142,13 @@ footer .btn:hover{
 
 .titleBar h1{
       font-size: 40px;
-      align-self: center;
+}
+
+.credito{
+      width: 100%;
+      text-align: right;
+      padding-right: 1%;
+      position: fixed;
+      margin-top: -55px;
+      z-index: 9999;
 }

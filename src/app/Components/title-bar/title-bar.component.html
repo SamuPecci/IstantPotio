@@ -1,4 +1,5 @@
 <div class="titleBar">
-      <a href=""><img src="../../../assets/indietro.png" alt="torna indrio"></a>
+      <a [routerLink]="['/']"><img src="../../../assets/indietro.png" alt="torna indrio"></a>
       <h1>{{titolo}}</h1>
+      <span class="credito">Credito: {{credito | number:"1.2"}}€</span>
 </div>

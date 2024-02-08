@@ -1,8 +1,6 @@
 <header class="heder fixed-top">
-      <a class="title" href="/">
+      <a class="title" [routerLink]="['/']">
             <img *ngIf="!home" src="../../../assets/indietro.png" class="indietro" alt="indietro">
             Istant Potio
       </a>
-
-      <span class="credito">Credito: {{credito}}€</span>
 </header>

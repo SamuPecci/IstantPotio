@@ -2,7 +2,7 @@
 
 <div class="flex-box">
       <div *ngFor="let p of prodotti" class="card text-bg-dark">
-            <a [routerLink]="['confermaAcquisto']">
+            <a (click)="scegliBevanda(p);">
                   <img [src]="p.img" class="card-img" alt="immagine prodotto">
                   <div class="card-img-overlay">
                         <div class="esolamenteuntest"><span class="card-title">

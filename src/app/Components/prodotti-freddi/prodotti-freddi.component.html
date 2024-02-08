@@ -7,15 +7,15 @@
 
 <div class="flex-box">
       <div *ngFor="let p of prodotti" class="card text-bg-dark">
-            <a href="">
-                  <img [src]="p.img" class="card-img" alt="immagine prodotto">
-                  <div class="card-img-overlay">
-                        <div class="esolamenteuntest"><span class="card-title">
+            <img [src]="p.img" class="card-img" alt="immagine prodotto">
+            <div class="card-img-overlay">
+                  <div class="esolamenteuntest">
+                        <span class="card-title">
                               {{p.nome}}<br>
                               {{p.prezzo | currency:"EUR"}}<br>
                               {{p.id}}
-                        </span></div>
+                        </span>
                   </div>
-            </a>
+            </div>
       </div>
 </div>

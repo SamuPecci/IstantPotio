@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { BevandaCalda } from '../../Models/BevandaCalda';
 import { ProdottiService } from '../../Service/prodotti.service';
 import { TitleBarComponent } from '../title-bar/title-bar.component';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-bevande-calde',
@@ -15,8 +15,14 @@ import { RouterModule } from '@angular/router';
 export class BevandeCaldeComponent {
   prodotti : BevandaCalda[];
 
-  constructor(prod : ProdottiService)
+  constructor(private prod:ProdottiService, private router:Router)
   {
     this.prodotti = prod.getBevandeCalde();
+  }
+
+  scegliBevanda(scelto:BevandaCalda)
+  {
+    this.prod.erogaProdottoCaldo(scelto);
+    this.router.navigate(["confermaAcquisto"]);
   }
 }

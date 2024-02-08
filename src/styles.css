@@ -152,3 +152,16 @@ footer .btn:hover{
       margin-top: -55px;
       z-index: 9999;
 }
+
+.erogazione
+{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.erogazione img
+{
+      height: 500px;
+      width: 500px;
+}

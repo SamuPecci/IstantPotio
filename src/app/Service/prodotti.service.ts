@@ -44,6 +44,8 @@ export class ProdottiService {
 
   prodottoScelto: Prodotto | undefined = undefined;
 
+  bevandaCaldaScelta : BevandaCalda | undefined = undefined;
+
   constructor(private sys:SystemService) { }
   
   getBevandeCalde() : BevandaCalda[]
@@ -54,6 +56,11 @@ export class ProdottiService {
   getProdottiFreddi() : ProdottoFreddo[]
   {
     return this.prodottiFreddi;
+  }
+
+  getBevandaCaldaScelta() : BevandaCalda | undefined
+  {
+    return this.bevandaCaldaScelta
   }
 
   getProdottoScelto() : Prodotto | undefined

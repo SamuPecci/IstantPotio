@@ -42,6 +42,8 @@ export class ProdottiService {
     new ProdottoFreddo("Tuc", "../../../assets/ProdottiFreddi/tuc.webp", 0.70, 3, 0, "015")
   ]
 
+  prodottoScelto: Prodotto | undefined = undefined;
+
   constructor(private sys:SystemService) { }
   
   getBevandeCalde() : BevandaCalda[]
@@ -54,6 +56,11 @@ export class ProdottiService {
     return this.prodottiFreddi;
   }
 
+  getProdottoScelto() : Prodotto | undefined
+  { 
+    return this.prodottoScelto
+  }
+
   erogaProdottoCaldo(nomeProdotto:string) : number
   {
     //Da implementare (ovviamente se no sei un coglione!)
@@ -62,16 +69,16 @@ export class ProdottiService {
 
   erogaProdottoFreddo(idProdotto:string) : number
   {
-    let prodottoScelto = this.prodottiFreddi.find(p => p.id == idProdotto);
+    this.prodottoScelto = this.prodottiFreddi.find(p => p.id == idProdotto);
     
-    if(prodottoScelto){
-      if(prodottoScelto.qtaDisponibile > 0){
-        if(this.sys.getCredito() >= prodottoScelto.prezzo){
+    if(this.prodottoScelto){
+      if(this.prodottoScelto.qtaDisponibile > 0){
+        if(this.sys.getCredito() >= this.prodottoScelto.prezzo){
           //Verificare che il pagamento vada a buon fine
-          this.sys.scalaCredito(prodottoScelto.prezzo)
+          this.sys.scalaCredito(this.prodottoScelto.prezzo)
           
-          prodottoScelto.qtaDisponibile--;
-          prodottoScelto.qtaVenduta++;
+          this.prodottoScelto.qtaDisponibile--;
+          this.prodottoScelto.qtaVenduta++;
     
           return 0;
         }else{

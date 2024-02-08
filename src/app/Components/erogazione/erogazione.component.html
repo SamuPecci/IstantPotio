@@ -1,1 +1,6 @@
-<p>erogazione works!</p>
+<span class="credito">Credito: {{credito | number:"1.2"}}€</span>
+<div class="erogazione">
+    <h1>Erogazione: {{prodottoScelto?.nome}}...</h1>
+    <img [src]="prodottoScelto?.img" alt="Immagine prodotto erogato">
+    <h2>{{msg}}</h2>
+</div>

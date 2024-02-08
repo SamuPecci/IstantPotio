@@ -154,17 +154,20 @@ footer .btn:hover{
       z-index: 10000;
 }
 
-.erogazione, .confermaAcquisto
-{
+.erogazione, .confermaAcquisto{
       display: flex;
       flex-direction: column;
       align-items: center;
 }
 
-.erogazione img, .confermaAcquisto img
-{
+.erogazione img{
       height: 500px;
       width: 500px;
+}
+
+.confermaAcquisto img{
+      height: 350px;
+      width: 350px;
 }
 
 .bottoniConferma{

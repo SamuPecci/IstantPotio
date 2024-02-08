@@ -26,7 +26,7 @@ export class SystemService {
 
       console.log(this.getCredito());
       return 0;
-    }else{
+    } else{
       return 2; //credito insuficiente
     }
 

@@ -1,4 +1,4 @@
-import { Component, ɵsetAllowDuplicateNgModuleIdsForTest } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProdottoFreddo } from '../../Models/ProdottoFreddo';
 import { ProdottiService } from '../../Service/prodotti.service';
 import { CommonModule } from '@angular/common';

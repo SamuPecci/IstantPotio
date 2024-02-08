@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProdottiService } from '../../Service/prodotti.service';
-import { System } from '../../Models/System';
 import { SystemService } from '../../Service/system.service';
 import { CommonModule } from '@angular/common';
 

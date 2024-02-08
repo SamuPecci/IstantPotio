@@ -81,13 +81,13 @@ export class ProdottiService {
           this.prodottoScelto.qtaVenduta++;
     
           return 0;
-        }else{
+        } else{
           return 4 //credito insuficiente
         }
-      }else{
+      } else{
         return 3; //prodotto terminato
       }
-    }else{
+    } else{
       return 2; //prodotto non valido
     }
 

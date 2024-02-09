@@ -1,6 +1,8 @@
 body{
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       font-size: 40px;
+      min-width: 740px;
+      background-color: #fbf7f2;
 }
 
 header{
@@ -30,7 +32,7 @@ footer{
       font-size: 25px;
       line-height: 1.6em;
 
-      background-color: gainsboro;
+      background-color: #eae4dc;
       height: 1.7em;
       width: 100%;
       border: 1px solid black;
@@ -41,11 +43,11 @@ footer .btn{
       height: 90%;
       width: 20%;
       margin-left: 40%;
-      background-color: lightsalmon;
+      background-color: #a96d54;
       border: none;
 }
 footer .btn:hover{
-      background-color: salmon;
+      background-color: #945033;
 }
 
 .versione{
@@ -57,9 +59,10 @@ footer .btn:hover{
 }
 
 .categorie{
+      background-color: white;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       margin: 1% 15%;
       padding: 0.5%;
       border: 5px solid black;
@@ -89,7 +92,7 @@ footer .btn:hover{
 
 .card{
       text-decoration: none;
-      margin: 1%;
+      margin: 3%;
       border: 0;
       width: 50%;
       cursor: default;
@@ -115,6 +118,7 @@ footer .btn:hover{
       border: 1px solid black;
       border-radius: 5px;
       height: 100%;
+      box-shadow: 10px 10px 10px #bdbdbd;
 }
 
 .card-title{
@@ -161,7 +165,7 @@ footer .btn:hover{
       flex-wrap: wrap;
       border: 1px solid black;
       border-top: 0;
-      background-color: #f3f5f5;
+      background-color: #f5ecdf;
 }
 
 .titleBar a{
@@ -199,11 +203,16 @@ footer .btn:hover{
 .erogazione img{
       height: 500px;
       width: 500px;
+      border: 2px solid black;
+      border-radius: 30px;
+      margin: 1%;
 }
 
 .confermaAcquisto img{
       height: 350px;
       width: 350px;
+      border: 2px solid black;
+      border-radius: 25px;
 }
 
 .bottoniConferma{
@@ -218,7 +227,7 @@ footer .btn:hover{
       width: 200px;
       height: 65px;
       border-radius: 30px;
-      color: #e0e0e0;
+      color: lightyellow;
 }
 
 #annulla{
@@ -259,9 +268,9 @@ footer .btn:hover{
 }
 
 .controlPannel .btn{
-      width: 20%;
+      width: 30%;
       margin: 2% auto;
       font-size: 25px;
       font-weight: bold;
-      border: 2px solid #ffc107;
+      border: 2px solid #212529;
 }

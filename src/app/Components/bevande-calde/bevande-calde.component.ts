@@ -17,12 +17,23 @@ export class BevandeCaldeComponent {
 
   constructor(private prod:ProdottiService, private router:Router)
   {
-    this.prodotti = prod.getBevandeCalde();
+    this.prodotti = this.prod.getBevandeCalde();
   }
 
   scegliBevanda(scelto:BevandaCalda)
   {
     this.prod.erogaProdottoCaldo(scelto);
     this.router.navigate(["confermaAcquisto"]);
+  }
+
+  cambiaCategoria(cat:string)
+  {
+    console.log(cat);
+    let p = this.prod.getBevandeCalde();
+    if(cat=="tutto"){
+      this.prodotti = p;
+    } else{
+      this.prodotti = p.filter(p => p.categoria==cat);
+    }
   }
 }

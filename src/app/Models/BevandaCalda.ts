@@ -8,6 +8,7 @@ export class BevandaCalda extends Prodotto
             prezzo:number,
             qtaDisponibile:number,
             qtaVenduta:number,
+            public categoria:string,
             public zucchero:number = 0) 
       {
             super(nome, img, prezzo, qtaDisponibile, qtaVenduta);

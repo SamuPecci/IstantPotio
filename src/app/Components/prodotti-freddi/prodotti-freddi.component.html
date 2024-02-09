@@ -5,11 +5,11 @@
       <div *ngFor="let n of numeri" (click)="scrivi(n)">{{n}}</div>
 </div>
 
-<div class="flex-box">
+<div class="flex-box-freddi">
       <div *ngFor="let p of prodotti" class="card text-bg-dark">
             <img [src]="p.img" class="card-img" alt="immagine prodotto">
             <div class="card-img-overlay">
-                  <div class="esolamenteuntest">
+                  <div class="titolo-sezione">
                         <span class="card-title">
                               {{p.nome}}<br>
                               {{p.prezzo | currency:"EUR"}}<br>

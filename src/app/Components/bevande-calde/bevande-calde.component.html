@@ -1,15 +1,29 @@
 <app-title-bar></app-title-bar>
 
-<div class="flex-box">
+<div class="categorie">
+      <input type="radio" class="btn-check" name="options-base" id="tutto" autocomplete="off" (click)="cambiaCategoria('tutto');" checked>
+      <label class="btn" for="tutto">Tutte le categorie</label>
+
+      <input type="radio" class="btn-check" name="options-base" id="caffe" autocomplete="off" (click)="cambiaCategoria('caffe');">
+      <label class="btn" for="caffe">Caffé</label>
+
+      <input type="radio" class="btn-check" name="options-base" id="latte" autocomplete="off" (click)="cambiaCategoria('latte');">
+      <label class="btn" for="latte">Latte</label>
+
+      <input type="radio" class="btn-check" name="options-base" id="altro" autocomplete="off" (click)="cambiaCategoria('altro');">
+      <label class="btn" for="altro">Altro</label>
+</div>
+
+<div class="flex-box-caldi">
       <div *ngFor="let p of prodotti" class="card text-bg-dark">
             <a (click)="scegliBevanda(p);">
                   <img [src]="p.img" class="card-img" alt="immagine prodotto">
                   <div class="card-img-overlay">
-                        <div class="esolamenteuntest"><span class="card-title">
-                              {{p.nome}}<br>
-                              {{p.prezzo | currency:"EUR"}}<br>
-                        </span></div>
+                        <div class="titolo-sezione"><span class="card-title">
+                                    {{p.nome}}<br>
+                                    {{p.prezzo | currency:"EUR"}}<br>
+                              </span></div>
                   </div>
             </a>
       </div>
-</div> 
+</div>

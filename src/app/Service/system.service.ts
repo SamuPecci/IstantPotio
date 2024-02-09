@@ -6,7 +6,7 @@ import { System } from '../Models/System';
 })
 export class SystemService {
 
-  sistema = new System();
+  sistema = new System(10, 0, "v 1.0");
 
   getVersione() : string
   {
@@ -16,6 +16,11 @@ export class SystemService {
   getCredito() : number
   {
     return this.sistema.credito;
+  }
+
+  getIncasso()
+  {
+    return this.sistema.incasso;
   }
 
   scalaCredito(spesa:number) : number

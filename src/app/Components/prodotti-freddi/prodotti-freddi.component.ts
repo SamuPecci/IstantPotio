@@ -18,7 +18,7 @@ export class ProdottiFreddiComponent {
   value: string = "";
   statusProdottoErogato: number | null = null;
 
-  constructor(private prod: ProdottiService, private router: Router) {
+  constructor(private prod:ProdottiService, private router:Router) {
     this.prodotti = prod.getProdottiFreddi();
   }
 
@@ -27,28 +27,33 @@ export class ProdottiFreddiComponent {
       this.value = this.value.slice(0, -1);
 
     else if (n == "INVIO") {
-      this.statusProdottoErogato = this.prod.erogaProdottoFreddo(this.value);
+      if(this.value == "999")
+        this.router.navigate(['controlPannel'])
 
-      switch (this.statusProdottoErogato) {
-        case 0:
-          this.router.navigate(['erogazione'])
-          break;
+      else{
+        this.statusProdottoErogato = this.prod.erogaProdottoFreddo(this.value);
 
-        case 2:
-          window.alert("Codice prodotto non valido");
-          break;
+        switch (this.statusProdottoErogato) {
+          case 0:
+            this.router.navigate(['erogazione'])
+            break;
 
-        case 3:
-          window.alert("Prodotto non disponibile");
-          break;
+          case 2:
+            window.alert("Codice prodotto non valido");
+            break;
 
-        case 4:
-          window.alert("Credito insuficiente");
-          break;
+          case 3:
+            window.alert("Prodotto non disponibile");
+            break;
 
-        default:
-          window.alert("Errore imprevisto");
-          break;
+          case 4:
+            window.alert("Credito insuficiente");
+            break;
+
+          default:
+            window.alert("Errore imprevisto");
+            break;
+        }
       }
     } else if (this.value.length < 3)
       this.value += n;

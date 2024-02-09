@@ -11,17 +11,17 @@ import { SystemService } from './system.service';
 export class ProdottiService {
 
   private bevandeCalde: BevandaCalda[] = [
-    new BevandaCalda("Espresso", "../../../assets/BevandeCalde/espresso.png", 0.80, 3, 0),
-    new BevandaCalda("Latte", "../../../assets/BevandeCalde/latte.png", 1, 3, 0),
-    new BevandaCalda("Té limone", "../../../assets/BevandeCalde/te.png", 0.70, 3, 0),
-    new BevandaCalda("Caffè lungo", "../../../assets/BevandeCalde/lungo.png", 0.80, 3, 0),
-    new BevandaCalda("Caffè corto", "../../../assets/BevandeCalde/corto.png", 0.80, 3, 0),
-    new BevandaCalda("Caffè macchiato", "../../../assets/BevandeCalde/macchiato.png", 0.90, 3, 0),
-    new BevandaCalda("Ginseng", "../../../assets/BevandeCalde/ginseng.png", 1.10, 3, 0),
-    new BevandaCalda("Cappuccino", "../../../assets/BevandeCalde/cappuccino.png", 1.20, 3, 0),
-    new BevandaCalda("Latte macchiato", "../../../assets/BevandeCalde/lattemacchiato.png", 0.80, 3, 0),
-    new BevandaCalda("Cioccolata calda", "../../../assets/BevandeCalde/cioccolatacalda.png", 0.80, 3, 0),
-    new BevandaCalda("Orzo", "../../../assets/BevandeCalde/orzo.png", 0.80, 3, 0)
+    new BevandaCalda("Espresso", "../../../assets/BevandeCalde/espresso.png", 0.80, 3, 0, "caffe"),
+    new BevandaCalda("Latte", "../../../assets/BevandeCalde/latte.png", 1, 3, 0, "latte"),
+    new BevandaCalda("Té limone", "../../../assets/BevandeCalde/te.png", 0.70, 3, 0, "altro"),
+    new BevandaCalda("Caffè lungo", "../../../assets/BevandeCalde/lungo.png", 0.80, 3, 0, "caffe"),
+    new BevandaCalda("Caffè corto", "../../../assets/BevandeCalde/corto.png", 0.80, 3, 0, "caffe"),
+    new BevandaCalda("Caffè macchiato", "../../../assets/BevandeCalde/macchiato.png", 0.90, 3, 0, "caffe"),
+    new BevandaCalda("Ginseng", "../../../assets/BevandeCalde/ginseng.png", 1.10, 3, 0, "altro"),
+    new BevandaCalda("Cappuccino", "../../../assets/BevandeCalde/cappuccino.png", 1.20, 3, 0, "caffe"),
+    new BevandaCalda("Latte macchiato", "../../../assets/BevandeCalde/lattemacchiato.png", 0.80, 3, 0, "latte"),
+    new BevandaCalda("Cioccolata calda", "../../../assets/BevandeCalde/cioccolatacalda.png", 0.80, 3, 0, "altro"),
+    new BevandaCalda("Orzo", "../../../assets/BevandeCalde/orzo.png", 0.80, 3, 0, "altro")
   ]
 
   private prodottiFreddi: ProdottoFreddo[] = [

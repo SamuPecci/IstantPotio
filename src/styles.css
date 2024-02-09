@@ -52,16 +52,31 @@ footer .btn:hover{
 }
 
 .corpo{
-      margin-top: 1.5em;
+      margin: 1.5em 0 1em 0;
 }
 
-.flex-box{
+.categorie{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 1% 15%;
+      padding: 1%;
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 70%;
+}
+
+.flex-box-freddi, .flex-box-caldi, .flex-box-home{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
 }
 
-.flex-box div{
+.flex-box-home{
+      width: 100%;
+}
+
+.flex-box-freddi div, .flex-box-caldi div{
       width: 300px;
 }
 
@@ -70,6 +85,13 @@ footer .btn:hover{
       margin: 1%;
       border: 0;
       width: 50%;
+      cursor: default;
+}
+.flex-box-caldi .card{
+      cursor: pointer;
+}
+.card-img-overlay{
+      padding: 0;
 }
 
 .card a{
@@ -78,10 +100,11 @@ footer .btn:hover{
       background-color: lightcyan;
 }
 
-.esolamenteuntest, .esolamenteuntest2{
+.titolo-sezione{
       display: flex;
       justify-content: center;
       align-items: center;
+      border: 1px solid black;
       height: 100%;
 }
 
@@ -116,6 +139,7 @@ footer .btn:hover{
       text-align: center;
       font-size: 0.7em;
       background-color: white;
+      cursor: pointer;
 }
 
 .titleBar{
@@ -196,4 +220,36 @@ footer .btn:hover{
 .form-range{
       width: 70%;
       margin-bottom: 3%;
+}
+
+.controlPannel{
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+}
+
+.controlPannel p{
+      margin: auto;
+}
+
+.controlPannel h1{
+      font-weight: bold;
+      margin: 3% auto 1% auto;
+}
+
+.controlPannel table{
+      width: 90%;
+      margin: auto;
+}
+.controlPannel table td, .controlPannel table th{
+      padding: 1%;
+      border: 1px solid black;
+}
+
+.controlPannel .btn{
+      width: 20%;
+      margin: 2% auto;
+      font-size: 25px;
+      font-weight: bold;
+      border: 2px solid #ffc107;
 }

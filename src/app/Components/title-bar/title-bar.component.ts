@@ -34,6 +34,10 @@ export class TitleBarComponent {
         this.titolo = "PRODOTTI FREDDI";
         break;
 
+      case "controlPannel":
+        this.titolo = "PANNELLO DI CONTROLLO";
+        break;
+
       default:
         this.titolo = "PAGINA";
     }

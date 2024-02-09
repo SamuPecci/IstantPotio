@@ -1,0 +1,41 @@
+<app-title-bar></app-title-bar>
+
+<div class="controlPannel">
+      <h1>Pannello di controllo</h1>
+      <p>
+            Credito: €{{credito | number:"1.2"}}<br>
+            Incasso: €{{incasso | number:"1.2"}}
+      </p>
+
+      <h1>Bevande Calde</h1>
+      <table>
+            <tr>
+                  <th>Nome</th>
+                  <th>Q.ta Venduta</th>
+                  <th>Q.ta Disponibile</th>
+            </tr>
+            
+            <tr *ngFor="let bc of bevandeCalde">
+                  <td>{{bc.nome}}</td>
+                  <td>{{bc.qtaVenduta}}</td>
+                  <td>{{bc.qtaDisponibile}}</td>
+            </tr>
+      </table>
+
+      <h1>Prodotti Freddi</h1>
+      <table>
+            <tr>
+                  <th>Nome</th>
+                  <th>Q.ta Venduta</th>
+                  <th>Q.ta Disponibile</th>
+            </tr>
+
+            <tr *ngFor="let pf of prodottiFreddi">
+                  <td>{{pf.nome}}</td>
+                  <td>{{pf.qtaVenduta}}</td>
+                  <td>{{pf.qtaDisponibile}}</td>
+            </tr>
+      </table>
+
+      <button type="button" class="btn btn-outline-warning">Download CSV</button>
+</div>

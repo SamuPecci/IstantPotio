@@ -6,7 +6,7 @@ import { System } from '../Models/System';
 })
 export class SystemService {
 
-  sistema = new System(10, 0, "v 1.0");
+  sistema = new System(10, 0, "v1.0");
 
   getVersione() : string
   {

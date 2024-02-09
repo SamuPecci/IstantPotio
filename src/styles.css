@@ -15,6 +15,12 @@ header{
       border: 1px solid black;
 }
 
+.heder img{
+      width: 40px;
+      height: 40px;
+      padding: 0 5px 5px 0;
+}
+
 .indietro{
       width: 1em;
       height: 1em;
@@ -30,7 +36,7 @@ header{
 
 footer{
       font-size: 25px;
-      line-height: 1.6em;
+      line-height: 1.5em;
 
       background-color: #eae4dc;
       height: 1.7em;
@@ -48,6 +54,9 @@ footer .btn{
 }
 footer .btn:hover{
       background-color: #945033;
+}
+footer .btn:active{
+      background-color: #7c5c4d !important;
 }
 
 .versione{
@@ -132,23 +141,28 @@ footer .btn:hover{
 .tastierino{
       margin: 30px auto 0 auto;
       display: flex;
-      width: 306px;
+      width: 300px;
       padding: 2px;
       align-items: center;
       flex-wrap: wrap;
-      border: 1px solid black;
+      border: 2px solid black;
+      border-radius: 10px;
       background-color: #f0f0f0;
 }
 
 .tastierino input{
-      margin-top: 10px;
-      width: 300px;
+      margin: 10px auto;
+      width: 290px;
+      border-radius: 10px;
       text-align: center;
+      border: 2px solid black;
+      margin-top: 0;
 }
 
 .tastierino div{
-      width: 90px;
+      width: 87px;
       border: 1px solid black;
+      border-radius: 10px;
       margin: 5px;
       text-align: center;
       font-size: 0.7em;

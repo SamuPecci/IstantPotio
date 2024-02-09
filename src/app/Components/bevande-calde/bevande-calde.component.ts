@@ -28,7 +28,6 @@ export class BevandeCaldeComponent {
 
   cambiaCategoria(cat:string)
   {
-    console.log(cat);
     let p = this.prod.getBevandeCalde();
     if(cat=="tutto"){
       this.prodotti = p;

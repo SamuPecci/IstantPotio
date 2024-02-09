@@ -19,7 +19,6 @@ export class TitleBarComponent {
     this.credito = sys.getCredito();
 
     let r = this.route.snapshot.url[0].path;
-    console.log(r);
 
     switch (r) {
       case "chisiamo":

@@ -3,8 +3,8 @@
 <div class="controlPannel">
       <h1>Pannello di controllo</h1>
       <p>
-            Credito: €{{credito | number:"1.2"}}<br>
-            Incasso: €{{incasso | number:"1.2"}}
+            Credito: {{credito | currency:"EUR"}}<br>
+            Incasso: {{incasso | currency:"EUR"}}
       </p>
 
       <h1>Bevande Calde</h1>
@@ -37,5 +37,5 @@
             </tr>
       </table>
 
-      <button type="button" class="btn btn-outline-warning">Download CSV</button>
+      <button (click)="creaCsv();" type="button" class="btn btn-outline-warning">Download CSV</button>
 </div>
